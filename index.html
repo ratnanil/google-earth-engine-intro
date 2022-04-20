@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Remote Sensing: Cloud-Based Geospatial Analysis</title>
+
+		<link rel="stylesheet" href="revealjs/dist/reset.css">
+		<link rel="stylesheet" href="revealjs/dist/reveal.css">
+		<link rel="stylesheet" href="revealjs/dist/theme/black.css">
+
+		<script src="https://kit.fontawesome.com/53bd508d27.js" crossorigin="anonymous"></script>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
+
+		<style>
+			.streaming {
+				--fa-border-padding: 20px; 
+				--fa-border-color: none
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Introduction to<br><br>
+					
+					<h1 class = "r-fit-text">Cloud-Based Geospatial Analysis</h1>
+				</section>
+				<section>
+					<section>
+						Data Explosion <br> 
+					
+						<img data-src="images/Datenvolumen_D-SDA.jpg" alt="" class = "fragment">	
+						<aside class="notes">
+							<ul>
+								<li>We in the middle of an explosion of Earth Observation data</li>
+								<li>Growth of Data is outpacing the growth of desktop harddrives AND internet bandwidth capacity </li>
+							</ul>
+						</aside>	
+						</section>
+					<section>
+						
+
+						<div class="r-hstack streaming fragmet">
+							<i class="fa-solid fa-code fa-2x fa-border"></i>
+							<i class="fa-solid fa-arrow-left fa-1x fa-border"></i>						
+							<i class="fa-solid fa-database fa-2x fa-border"></i>			
+						</div>
+						<br>
+
+						Paradigm Shift <br> <br>
+
+						<div class="r-hstack streaming fragment">
+							<i class="fa-solid fa-code fa-2x fa-border"></i>
+							<i class="fa-solid fa-arrow-right fa-1x fa-border"></i>						
+							<i class="fa-solid fa-database fa-2x fa-border"></i>			
+						</div>
+						<aside class="notes">
+							Local storage vs. Streaming (see Spotify)
+						</aside>
+
+
+						
+					</section>
+											
+
+									
+					
+				</section>
+				<section>
+					<section>
+						Overview <br> <br> 
+				
+
+						<ul style="font-size: x-large;">					
+							<li class = "fragment">Google Earth Engine (GEE) </li>
+							<li class = "fragment">Sentinel Hub</li>
+							<li class = "fragment">Open Data Cube (ODC)</li>
+							<li class = "fragment">SEPAL</li> <!--System for Earth Observation Data Access, Processing and Analysis for Land Monitoring -->
+							<li class = "fragment">JEODPP</li>
+							<li class = "fragment">pipsCloud</li>
+							<li class = "fragment">...</li>
+							<li class = "fragment">openEO</li>
+
+					</ul>
+
+						<aside class="notes">
+							Over the years, a large number of EO-Platforms have emerged. 
+						</aside>
+
+					</section>
+					<section>
+						<img data-src="images/tweet.png" alt="">
+						
+					</section>
+				</section>	
+				<section>
+					<section>
+						<h2 class="r-fit-text">Google Earth Engine API</h2>
+						
+					</section>
+
+					<section>
+						<ul style="font-size: xx-large;">
+							<li><b>Image:</b> band math, clip, convolution, neighborhood, selection ...</li>
+							<li><b>Image Collection:</b> map, aggregate, filter, mosaic, sort ...</li>
+							<li><b>Feature:</b> buffer, centroid, intersection, union, transform ...</li>
+							<li><b>Feature Collection:</b> aggregate, filter, flatten, merge, sort …</li>
+							<li><b>Filter:</b> by bounds, within distance, date, day-of-year, metadata ...</li>
+							<li><b>Reducer:</b> mean, linearRegression, percentile, histogram ….</li>
+							<li><b>Join:</b> simple, inner, outer, inverted ...</li>
+							<li><b>Kernel:</b> square, circle, gaussian, sobel, kirsch …</li>
+							<li><b>Machine Learning:</b> CART, random forests, bayes, SVM, kmeans, cobweb …</li>
+							<li><b>Projection:</b> transform, translate, scale …</li>
+						</ul>
+						
+					
+					
+					</section>
+					<section>
+						<img data-src="images/gee.png" alt="">
+					</section>
+
+
+				</section>
+
+				<section>
+					<section>
+						<small>(a very quick)</small>
+						<h2> Introduction to Javascript</h2>
+					</section>
+					<section>
+
+						Comments
+							<pre><code data-trim class="js" data-line-numbers="1-2|4-8">
+								// Line comments start with two forward slashes. 
+								// Like this line.
+
+								/* 
+								Multi line comments start with a forward slash 
+								and a star,
+								and end with a star and a forward slash. 
+								*/
+							</code></pre>
+					</section>
+					<section>
+						Variable declaration
+						<pre><code data-trim class="js" data-line-numbers="1-3|5-6">
+							// Variables are used to store objects, and are defined 
+							// using the keyword var.
+							var the_answer = 42;
+
+							// String objects start and end with double quotes.
+							var my_variable = "I am a string";
+						</code></pre>
+					</section>
+					<section>
+						Statements
+						<pre><code data-trim class="js" data-line-numbers="1-2|4">
+							// Statements *should* end in a semi-colon
+							var test = 'I feel incomplete...'
+
+							var test = 'I feel complete...';
+							
+							</code></pre>
+
+
+
+					</section>
+					<section>
+						Functions 
+							<pre><code data-trim class="js">
+								// Parentheses are used to pass parameters to functions.
+								print("This string is a parameter of the function print()");
+							</code></pre>
+					</section>
+					<section>
+						
+							Lists
+							<pre><code data-trim class="js" data-line-numbers="1-2|4-6">
+								// Squre brackets are used to create a list of items
+								var my_list = ['eggplant', 'apple', 'wheat'];
+
+								// Square brackets are also used for selecting items within 
+								// a list. 0 refers to the first item in the list.
+								my_list[0];
+
+								
+							</code></pre>
+					</section>
+					<section>
+							Dictionaries
+							<pre><code data-trim class="js" data-line-numbers="1-2|4-5|7-8">
+								// Curly brackets are used to define "dictionaries"
+								var my_dict = {'food':'bread', 'color':'red', 'number':42};
+
+								// Square brackets are used to access items (by key).
+								my_dict['color'];
+
+								// Or you can use the dot notation to get the same result.
+								my_dict.color;
+							</code></pre>
+					</section>
+					<section>
+						Functions
+						<pre><code data-trim class="js" data-line-numbers="1-5|7">
+								// Functions can be defined as a way to reuse code and 
+								// make it easier to read.
+								var say_hello = function(string) {
+									return 'Hello ' + string + '!';
+								};
+
+								say_hello('world');
+							
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 class="r-fit-text">First steps in Google Earth Engine</h2>
+					</section>
+					<section>
+						Importing Data
+						<pre><code data-trim class="" data-line-numbers="">
+							var srtm = ee.Image("USGS/SRTMGL1_003")
+						</code></pre>
+					</section>
+				</section>
+				
+				
+			</div>
+		</div>
+
+		<script src="revealjs/dist/reveal.js"></script>
+		<script src="revealjs/plugin/notes/notes.js"></script>
+		<script src="revealjs/plugin/markdown/markdown.js"></script>
+		<script src="revealjs/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
