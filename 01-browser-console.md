@@ -67,11 +67,7 @@ But this only works from the interactive console.
 myage_days;
 ```
 
-Correctly, you need to `console.log()` something to see it in the console
 
-```js
-console.log(myage_days);
-```
 
 `let` and `const` are other ways to create variables  with subtle differences, but we will ignore these in our lesson.
 

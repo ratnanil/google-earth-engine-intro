@@ -20,11 +20,19 @@ var myname = "Nils Ratnaweera";
 
 Demonstrate `console.log`.
 
+
 ```js
 var myname = "Nils Ratnaweera";
-console.log(myname);
-``` 
 
+// this wont show in the console
+var myname = "Nils Ratnaweera";
+```
+
+
+```js
+// adding this will:
+console.log(myage_days);
+```
 
 Demonstrate creating numeric values
 
