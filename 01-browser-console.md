@@ -18,7 +18,7 @@ var myname = "Nils Ratnaweera";
 Checking the `type`
 
 ```js
-type(myname)
+typeof(myname)
 ```
 
 
@@ -72,6 +72,6 @@ myage_days;
 `let` and `const` are other ways to create variables  with subtle differences, but we will ignore these in our lesson.
 
 ```js
-let myname = "Nils Ratnaweera";
-const myname = "Nils Ratnaweera";
+let email = "rata@zhaw.ch";
+const employer = "ZHAW";
 ```

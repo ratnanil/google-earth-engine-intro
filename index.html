@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Remote Sensing: Cloud-Based Geospatial Analysis</title>
+	<title>Remote Sensing: Geospatial Analysis in the cloud</title>
 
 	<link rel="stylesheet" href="revealjs/dist/reset.css">
 	<link rel="stylesheet" href="revealjs/dist/reveal.css">
@@ -40,6 +40,13 @@
 			padding: .1em .6em;
 			text-shadow: 0 1px 0 #fff;
 		}
+
+		code{
+			font-size:smaller;
+			background-color:#ccc;
+			padding: 4px;
+			border-radius: 2px;
+		}
 	</style>
 
 </head>
@@ -51,11 +58,11 @@
 
 				<p style="text-shadow: 2px 2px #1c1b1b;">Introduction to</p>
 
-				<h1 class="r-fit-text" style="text-shadow: 2px 2px #1c1b1b;">Cloud-Based Geospatial Analysis</h1>
+				<h1 class="r-fit-text" style="text-shadow: 2px 2px #1c1b1b;">Geospatial Analysis in the Cloud</h1>
 			</section>
 			<section>
 				<section>
-					<h2>Why Cloud-Based?</h2>
+					<h2>Why in the Cloud?</h2>
 				</section>
 				<section>
 					Data Explosion <br>
@@ -154,6 +161,8 @@
 
 			</section>
 
+
+
 			<section>
 				<section>
 					<small class="fragment">(a <em>very</em> brief)</small>
@@ -170,44 +179,12 @@
 					</ol>
 				</section>
 
-		
-
-				<section>
-					<ol>
-						<li class="fragment">Open a plain text editor <span class="fragment">(e.g. <span
-									class="highlight">Notepad</span> on Windows, <span class="highlight">TextEdit</span>
-								or <span class="highlight">RStudio</span> )</span></li>
-						<li class="fragment">Create a file with the extension <code>.html</code> </li>
-						<li class="fragment">Create a <code>script</code> tag</li>
-						<pre class="fragment"><code data-trim class="" data-line-numbers="">
-								<script>
-
-								</script>
-							</code></pre>
-						<li class="fragment">Open this file in the browser</li>
-						<li class="fragment">Follow along! (Demo time)</li>
-					</ol>
-				</section>
+				
 
 				<section>
 					<h3>Recap</h3>
 				</section>
-				
 
-				<section>
-
-					Comments
-					<pre><code data-trim class="js" data-line-numbers="1-2|4-8">
-								// Line comments start with two forward slashes. 
-								// Like this line.
-
-								/* 
-								Multi line comments start with a forward slash 
-								and a star,
-								and end with a star and a forward slash. 
-								*/
-							</code></pre>
-				</section>
 				<section>
 					Variable declaration
 					<pre><code data-trim class="js" data-line-numbers="1-3|5-6">
@@ -239,6 +216,80 @@
 
 
 				</section>
+		
+
+				<section>
+					<ol>
+						<li class="fragment">Open a plain text editor <span class="fragment">(e.g. <span
+									class="highlight">Notepad</span> on Windows, <span class="highlight">TextEdit</span>
+								or <span class="highlight">RStudio</span> )</span></li>
+						<li class="fragment">Create a file with the extension <code>.html</code> </li>
+						<li class="fragment">Create a <code>script</code> tag</li>
+						<pre class="fragment"><code data-trim class="" data-line-numbers="">
+								<script>
+
+								</script>
+							</code></pre>
+						<li class="fragment">Open this file in the browser</li>
+						<li class="fragment">Follow along! (Demo time)</li>
+					</ol>
+				</section>
+
+				<section>
+					Task:
+
+					<ol>
+						<li class="fragment">Create a variable <code>myname</code> with your name</li>
+						<li class="fragment">Create a variable <code>myage</code> with your age</li>
+						<li class="fragment">Calculate your age in days and store it in <code>myage_days</code></li>
+						<li class="fragment">Print to the console: <code>Hi, my name is ... and I am ... days old</code></li>
+					</ol>
+
+				</section>
+
+				<section>
+					Demo continues...
+				</section>
+
+				<section>
+					Task:
+
+					<ul>
+						<li>Create a function that converts a number of years to a number of days</li>
+						<li>Name the function <code>years2days</code></li>
+					</ul>
+					<pre><code data-trim class="" data-line-numbers="">
+						// this is the syntax for creating a function:
+						function say_something(what){
+							console.log(what)
+						};
+					</code></pre>
+				</section>
+
+				<section>
+					Demo continues...
+				</section>
+
+				<section>
+					<h3>Recap</h3>
+				</section>
+				
+
+				<section>
+
+					Comments
+					<pre><code data-trim class="js" data-line-numbers="1-2|4-8">
+								// Line comments start with two forward slashes. 
+								// Like this line.
+
+								/* 
+								Multi line comments start with a forward slash 
+								and a star,
+								and end with a star and a forward slash. 
+								*/
+							</code></pre>
+				</section>
+				
 				<section data-visibility="hidden">
 					Functions
 					<pre><code data-trim class="js">
