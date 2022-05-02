@@ -129,14 +129,23 @@
 
 				</section>
 
+				<section>
+					Carbon footprint? <br> <br>
+
+					<a class="fragment" href="https://www.cloudcarbonfootprint.org/">cloudcarbonfootprint.org</a>
+				</section>
+
 			</section>
 
 			<section>
 				<section>
-					<h2 class="r-fit-text">Google Earth Engine API</h2>
+					<h2 class="r-fit-text">Google Earth Engine</h2>
 
 				</section>
-
+			
+				<section>
+					<img data-src="images/gee.png" alt="">
+				</section>
 				<section>
 					<ul style="font-size: xx-large;">
 						<li><b>Image:</b> band math, clip, convolution, neighborhood, selection ...</li>
@@ -151,13 +160,7 @@
 						<li><b>Projection:</b> transform, translate, scale …</li>
 					</ul>
 
-
-
 				</section>
-				<section>
-					<img data-src="images/gee.png" alt="">
-				</section>
-
 
 			</section>
 
@@ -165,15 +168,17 @@
 
 			<section>
 				<section>
-					<small class="fragment">(a <em>very</em> brief)</small>
+					<small>(a <em>very</em> brief)</small>
 					<h2> Introduction to Javascript</h2>
+
+					<small class="fragment">Todays evaluation metric: # of javascript code</small>
 				</section>
 
 				<section>
 					<ol>
 						<li class="fragment">Open a browser window</li>
-						<li class="fragment">Press <kbd>F12</kbd> to open the developer tools
-							<!--or <kbd>Ctr</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<kbd>Command</kbd>+<kbd>option</kbd>+<kbd>I</kbd> on a Mac)</li>-->
+						<li class="fragment">Press <kbd>F12</kbd> to open the developer tools </li>
+							<!--or <kbd>Ctr</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<kbd>Command</kbd>+<kbd>option</kbd>+<kbd>I</kbd> on a Mac)-->
 						<li class="fragment">Go to the <code>console</code> tab</li>
 						<li class="fragment">Follow along! (Demo time)</li>
 					</ol>
@@ -356,17 +361,22 @@
 			</section>
 			<section>
 				<section>
-					<h2 class="r-fit-text">A quick detour to understanding websites</h2>
+					<h2 class="r-fit-text">Javascript in websites</h2>
 				</section>
 				<section>
 					<p class="r-fit-text">Javascript is part of a trinity that defines most of the web</p>
 
 					<img src="https://www.phon.ucl.ac.uk/courses/spsci/webprog/images/html-css-js.png" alt="">
-
-					<p class="r-fit-text fragment">Let's take this opportunity to explore and understand this.</p>
+					
 				</section>
 
-				<section data-auto-animate>
+				<section>
+					<p class="r-fit-text fragment">Let's take this opportunity to explore and understand this.</p>
+
+					<p class="fragment">(Demo time)</p>
+				</section>
+
+				<section data-auto-animate data-visibility="hidden">
 					<pre data-id="myapp"><code data-trim class="html" data-line-numbers="">
 						<script type="text/template">
 							<!DOCTYPE html>
@@ -378,7 +388,7 @@
 						
 					</code></pre>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<pre data-id="myapp"><code data-trim class="html" data-line-numbers="">
 						<script type="text/template">
 							<!DOCTYPE html>
@@ -391,7 +401,7 @@
 						
 					</code></pre>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<pre data-id="myapp"><code data-trim class="html" data-line-numbers="">
 						<script type="text/template">
 							<!DOCTYPE html>
@@ -408,6 +418,16 @@
 						
 					</code></pre>
 				</section>
+
+				<section>
+					Challenge: <br>
+
+					<p>Create an application that takes your name as an input and returns the name backwards.</p> <br>
+
+					<p class="fragment">Tipp: use the methods <code>split</code>, <code>reverse</code> and <code>join</code>.</p>
+
+					
+				</section>
 			
 
 
@@ -419,27 +439,53 @@
 
 				<section>
 					<p>Instructions</p>
-					<ul style="font-size: x-large;">
-						<li class="fragment">Step 1: Go to <a
+					<ol style="font-size: x-large;">
+						<li class="fragment">Go to <a
 								href="https://code.earthengine.google.com">code.earthengine.google.com</a></li>
-						<li class="fragment">Step 2: Play around with the Code Editor (create variables, dictionaries,
+						<li class="fragment">Play around with the Code Editor (create variables, dictionaries,
 							lists...)</li>
-						<li class="fragment">Step 3: Navigate to the location "Visp" using the search bar</li>
-						<li class="fragment">Step 4: Look for the dataset <code>NASA SRTM Digital Elevation 30m</code>
-							(search bar)</li>
-
-					</ul>
-
+						<li class="fragment">Navigate to the location "Visp" using the search bar</li>
+						<li class="fragment">Look for a dataset in the search bar (e.g. <code>NASA SRTM Digital Elevation 30m</code>)</li>
+					</ol>
 
 				</section>
-				<section data-auto-animate>
+
+				<section>
+					Demo 1 (SRTM)
+				</section>
+
+				<section>
+					Demo 2 (Sentinel RBG)
+				</section>
+
+				<section>
+					Demo 3 (Sentinel NDVI)
+				</section>
+
+				<section>
+					Demo 4 (Sentinel NDVI ΔT)
+				</section>
+
+				<section>
+					Demo 5 (Sentinel NDVI ΔT, no clouds)
+				</section>
+
+				<section>
+					Demo 6 (Forest Cover change)
+				</section>
+
+				<section>
+					Demo 7 (Land use classification)
+				</section>
+
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
 							var srtm = ee.Image("USGS/SRTMGL1_003")
 						</code></pre>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
@@ -450,7 +496,7 @@
 
 
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
@@ -461,7 +507,7 @@
 							Map.addLayer(srtm);
 						</code></pre>
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
@@ -476,7 +522,7 @@
 
 
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
@@ -491,7 +537,7 @@
 						</code></pre>
 
 				</section>
-				<section data-auto-animate>
+				<section data-auto-animate data-visibility="hidden">
 					<p>Importing Data </p>
 					<p style="font-size:smaller">(hit <kbd>Ctr</kbd> + <kbd>Enter</kbd> to run the script)</p>
 					<pre data-id="import"><code data-trim class="js" data-line-numbers>
