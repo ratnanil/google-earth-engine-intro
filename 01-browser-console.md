@@ -9,13 +9,15 @@ Creating string variables:
 myname = "Nils Ratnaweera" 
 
 // use var to create a new variable 
+// ommiting var works and if you're in the global scope then 
+// there's not much difference. https://stackoverflow.com/a/1470494/4139249
 var myname = "Nils Ratnaweera" 
 
 // end statement with a semi colon
 var myname = "Nils Ratnaweera"; 
 ```
 
-Checking the `type`
+Checking the `typeof`
 
 ```js
 typeof(myname)
@@ -29,7 +31,7 @@ Creating numeric varibles
 var myage = "34";
 
 // check the type of this number
-type(myage);
+typeof(myage);
 // why is this not a number, but a string?
 
 // you can't do maths
@@ -41,7 +43,7 @@ myage+1;
 // number are not in quotes (just like in R)
 var myage = 34;
 
-type(myage);
+typeof(myage);
 
 // now, you can do math
 myage+1
@@ -65,9 +67,8 @@ But this only works from the interactive console.
 
 ```js
 myage_days;
+console.log(myage_days);
 ```
-
-
 
 `let` and `const` are other ways to create variables  with subtle differences, but we will ignore these in our lesson.
 
