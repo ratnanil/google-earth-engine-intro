@@ -13,7 +13,6 @@
 
 	<script src="https://kit.fontawesome.com/53bd508d27.js" crossorigin="anonymous"></script>
 
-	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="revealjs/plugin/highlight/monokai.css">
 
 	<style>
@@ -67,7 +66,7 @@
 				<section>
 					Data Explosion <br>
 
-					<img data-src="images/Datenvolumen_D-SDA.jpg" alt="">
+					<img data-src="images/Datenvolumen_D-SDA.jpg" alt="" width="80%">
 					<aside class="notes">
 						<ul>
 							<li>We in the middle of an explosion of Earth Observation data</li>
@@ -94,8 +93,10 @@
 						<i class="fa-solid fa-database fa-2x fa-border"></i>
 					</div>
 					<aside class="notes">
-						Local storage vs. Streaming.
-						This is similar to the spotify streaming music vs. mp3 paradigm shift.
+						<ul>
+							<li>Before: Buy CD's, put them into your cd player</li>
+							<li>Now: Store the data on servers, stream only what you need</li>
+						</ul>
 					</aside>
 
 
@@ -112,11 +113,10 @@
 						<li class="fragment">Sentinel Hub</li>
 						<li class="fragment">Open Data Cube (ODC)</li>
 						<li class="fragment">SEPAL</li>
-						<!--System for Earth Observation Data Access, Processing and Analysis for Land Monitoring -->
 						<li class="fragment">JEODPP</li>
 						<li class="fragment">pipsCloud</li>
 						<li class="fragment">...</li>
-						<li class="fragment highlight-red">openEO</li>
+						<li class="fragment">openEO</li>
 
 					</ul>
 
@@ -220,10 +220,13 @@
 					<ol>
 						<li class="fragment">Open a browser window</li>
 						<li class="fragment">Press <kbd>F12</kbd> to open the developer tools </li>
-							<!--or <kbd>Ctr</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<kbd>Command</kbd>+<kbd>option</kbd>+<kbd>I</kbd> on a Mac)-->
 						<li class="fragment">Go to the <code>console</code> tab</li>
 						<li class="fragment">Follow along! (Demo time)</li>
 					</ol>
+
+					<aside class="notes">
+						Demo 1
+					</aside>
 				</section>
 
 				
@@ -267,9 +270,9 @@
 
 				<section>
 					<ol>
-						<li class="fragment">Open a plain text editor <span class="fragment">(e.g. <span
-									class="highlight">Notepad</span> on Windows, <span class="highlight">TextEdit</span>
-								or <span class="highlight">RStudio</span> )</span></li>
+						<li class="fragment">Open a plain text editor, e.g. RStudio, <span
+									class="highlight">Notepad</span> (Windows) or <span class="highlight">TextEdit (Mac)</span>
+								<span class="highlight"></span></li>
 						<li class="fragment">Create a file with the extension <code>.html</code> </li>
 						<li class="fragment">Create a <code>script</code> tag</li>
 						<pre class="fragment"><code data-trim class="" data-line-numbers="">
@@ -280,6 +283,10 @@
 						<li class="fragment">Open this file in the browser</li>
 						<li class="fragment">Follow along! (Demo time)</li>
 					</ol>
+
+					<aside class="notes">
+						Demo 2
+					</aside>
 				</section>
 
 				<section>
@@ -292,10 +299,18 @@
 						<li class="fragment">Print to the console: <code>Hi, my name is ... and I am ... days old</code></li>
 					</ol>
 
+					<aside class="notes">
+						Task: Basic Html
+					</aside>
+
 				</section>
 
 				<section>
 					Demo continues...
+
+					<aside class="notes">
+						Demo 3
+					</aside>
 				</section>
 
 				<section>
@@ -311,10 +326,18 @@
 							console.log(what)
 						};
 					</code></pre>
+
+					<aside class="notes">
+						Task: Years2days
+					</aside>
 				</section>
 
 				<section>
 					Demo continues...
+
+					<aside class="notes">
+						Demo Methods
+					</aside>
 				</section>
 
 				<section>
@@ -408,14 +431,18 @@
 				<section>
 					<p class="r-fit-text">Javascript is part of a trinity that defines most of the web</p>
 
-					<img src="https://www.phon.ucl.ac.uk/courses/spsci/webprog/images/html-css-js.png" alt="">
+					<img src="images/htm-js-css.png" alt="">
 					
 				</section>
 
 				<section>
-					<p class="r-fit-text fragment">Let's take this opportunity to explore and understand this.</p>
+					<p class="r-fit-text">Let's take this opportunity to explore and understand this.</p>
 
 					<p class="fragment">(Demo time)</p>
+
+					<aside class="notes">
+						Demo: years2days Website
+					</aside>
 				</section>
 
 				<section data-auto-animate data-visibility="hidden">
@@ -468,6 +495,9 @@
 
 					<p class="fragment">Tipp: use the methods <code>split</code>, <code>reverse</code> and <code>join</code>.</p>
 
+					<aside class="notes">
+						Task: Reverse Name
+					</aside>
 					
 				</section>
 			
@@ -487,37 +517,41 @@
 						<li class="fragment">Play around with the Code Editor (create variables, dictionaries,
 							lists...)</li>
 						<li class="fragment">Navigate to the location "Visp" using the search bar</li>
-						<li class="fragment">Look for a dataset in the search bar (e.g. <code>NASA SRTM Digital Elevation 30m</code>)</li>
+						<li class="fragment">Look for a dataset in the search bar (search e.g. for <em>NASA</em> )</li>
 					</ol>
 
 				</section>
 
+
+
 				<section>
-					Demo 1 (SRTM)
+					<h3>Demo 1 (SRTM)<h3></h3></h3>
+
+					<p>(note: all code will be shared)</p>
 				</section>
 
 				<section>
-					Demo 2 (Sentinel RBG)
+					<h3>Demo 2 (Sentinel RBG)</h3>
 				</section>
 
 				<section>
-					Demo 3 (Sentinel NDVI)
+					<h3>Demo 3 (Sentinel NDVI)</h3>
 				</section>
 
 				<section>
-					Demo 4 (Sentinel NDVI ΔT)
+					<h3>Demo 4 (Sentinel NDVI ΔT)</h3>
 				</section>
 
 				<section>
-					Demo 5 (Sentinel NDVI ΔT, no clouds)
+					<h3>Demo 5 (Sentinel NDVI ΔT, no clouds)</h3>
 				</section>
 
 				<section>
-					Demo 6 (Forest Cover change)
+					<h3>Demo 6 (Forest Cover change)</h3>
 				</section>
 
 				<section>
-					Demo 7 (Land use classification)
+					<h3>Demo 7 (Land use classification)</h3>
 				</section>
 
 				<section data-auto-animate data-visibility="hidden">

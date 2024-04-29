@@ -11,6 +11,11 @@ myname = "Nils Ratnaweera"
 // use var to create a new variable 
 // ommiting var works and if you're in the global scope then 
 // there's not much difference. https://stackoverflow.com/a/1470494/4139249
+var myname 
+
+myname = "Nils Ratnaweera" 
+
+// or in one go:
 var myname = "Nils Ratnaweera" 
 
 // end statement with a semi colon

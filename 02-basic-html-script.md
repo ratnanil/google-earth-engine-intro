@@ -22,10 +22,10 @@ Demonstrate `console.log`.
 
 
 ```js
-var myname = "Nils Ratnaweera";
-
 // this wont show in the console
 var myname = "Nils Ratnaweera";
+
+myname;
 ```
 
 
